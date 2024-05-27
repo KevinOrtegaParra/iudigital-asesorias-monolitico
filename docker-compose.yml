@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mi-proyecto-monolitico:
+    container_name: mi-proyecto-monolitico
+    image: mi-proyecto-monolitico:v1
+    build :
+      context: .
+    ports:
+      - "9000:9000"
+    networks:
+      - proyectos-app
+networks:
+  proyectos-app:
